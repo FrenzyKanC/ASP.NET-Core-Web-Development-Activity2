@@ -28,7 +28,7 @@ namespace ASP.NET_Core_Web_Development_Activity2.Controllers
         public IActionResult Welcome(string name, int secretNumber = 13)
         {
             // ViewBag is a property – considered a dynamic object – that enables you to share values dynamically
-            // between the controller and view within ASP.NET MVC applications.
+            // between the controller and view within ASP.NET MVC applications. 
             ViewBag.Name = name;
             ViewBag.SecretNumber = secretNumber;
             // added Razor View "Welcome"
