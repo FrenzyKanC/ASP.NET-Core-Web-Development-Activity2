@@ -1,13 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ASP.NET_Core_Web_Development_Activity2.Models;
+using ASP.NET_Core_Web_Development_Activity2.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NET_Core_Web_Development_Activity2.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            HardCodedSampleDataRepository hardCodedSampleDataRepository = new HardCodedSampleDataRepository();
+
+                // liste wird angezeigt
+                return View(hardCodedSampleDataRepository.GetAllProducts());
         }
+
+        
+
+
 
         // IActionResult = Interface das diverse Dinge wieder geben kann, bevorzugt aber Views()
         public IActionResult Message()
