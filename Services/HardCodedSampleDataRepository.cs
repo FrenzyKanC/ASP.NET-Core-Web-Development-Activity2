@@ -1,6 +1,6 @@
 ﻿using ASP.NET_Core_Web_Development_Activity2.Models;
 
-namespace ASP.NET_Core_Web_Development_Activity2.Services
+namespace ASP.NET_Core_Web_Development_Activity2.Services 
 {
     // : = extends/implements
     // implement interface: IProductDataService into IProductDataService
