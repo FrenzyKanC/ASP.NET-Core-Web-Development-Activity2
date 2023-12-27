@@ -4,11 +4,11 @@ namespace ASP.NET_Core_Web_Development_Activity2.Services
 {
     public interface IProductDataService
     {
-        List<ProductsModel> GetAllProducts();
-        List<ProductsModel> SearchProducts(string searchTerm);
-        ProductsModel GetProductById(int id);
-        int Insert(ProductsModel product);
-        int Delete(ProductsModel product);
-        int Update(ProductsModel product);
+        List<ProductModel> GetAllProducts();
+        List<ProductModel> SearchProducts(string searchTerm);
+        ProductModel GetProductById(int id);
+        int Insert(ProductModel product);
+        int Delete(ProductModel product);
+        int Update(ProductModel product);
     }
 }

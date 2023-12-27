@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ASP.NET_Core_Web_Development_Activity2.Models
 {
-    public class ProductsModel
+    public class ProductModel
     {
         [DisplayName("Id Number")]
         public int Id { get; set; }

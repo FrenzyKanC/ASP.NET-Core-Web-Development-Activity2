@@ -8,14 +8,28 @@ namespace ASP.NET_Core_Web_Development_Activity2.Controllers
     {
         public IActionResult Index()
         {
-            HardCodedSampleDataRepository hardCodedSampleDataRepository = new HardCodedSampleDataRepository();
+           // auskommentiert um db zu nutzen
+           // HardCodedSampleDataRepository hardCodedSampleDataRepository = new HardCodedSampleDataRepository();
+
+            ProductsDAO products = new ProductsDAO();
 
                 // liste wird angezeigt
-                return View(hardCodedSampleDataRepository.GetAllProducts());
+               // return View(hardCodedSampleDataRepository.GetAllProducts());
+               return View(products.GetAllProducts());
         }
 
-        
+        public IActionResult SearchResults(string searchTerms)
+        {
+            ProductsDAO products = new ProductsDAO();
 
+            List<ProductModel> productsList = products.SearchProducts(searchTerms);
+            return View("index", productsList);
+        }
+
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
 
 
         // IActionResult = Interface das diverse Dinge wieder geben kann, bevorzugt aber Views()

@@ -1,0 +1,26 @@
+﻿@model ASP.NET_Core_Web_Development_Activity2.Models.ProductModel
+<!-- Post Request-->
+<h4>Search form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchResults">
+
+            <div class="form-group">
+                <label class="control-label">Insert product search term:</label>
+
+                <input name="searchTerm" class="form-control"/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
