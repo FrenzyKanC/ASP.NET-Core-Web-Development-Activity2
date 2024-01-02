@@ -18,12 +18,12 @@ namespace ASP.NET_Core_Web_Development_Activity2.Controllers
                return View(products.GetAllProducts());
         }
 
-        public IActionResult SearchResults(string searchTerms)
+        public IActionResult SearchResults(string searchTerm)
         {
             ProductsDAO products = new ProductsDAO();
 
-            List<ProductModel> productsList = products.SearchProducts(searchTerms);
-            return View("index", productsList);
+            List<ProductModel> productList = products.SearchProducts(searchTerm);
+            return View("index", productList);
         }
 
         public IActionResult SearchForm()
