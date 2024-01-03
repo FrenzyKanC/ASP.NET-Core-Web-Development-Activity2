@@ -27,7 +27,10 @@
              <h5 class="card-title">@item.Name</h5>
              <p class="card-text">@Html.DisplayFor(m =>item.Price)</p>
              <p class="card-text">@item.Description</p>
-             <a href="#" class="btn btn-primary">Go somewhere</a>
+             <!--url des Show details-->
+             <a href="/product/ShowDetails/@item.Id" class="btn btn-primary">Show details</a>
+             <a href="/product/Edit/@item.Id" class="btn btn-warning">Edit</a>
+             <a href="/product/Delete/@item.Id" class="btn btn-danger">Delete</a>
          </div>
         </div>
     }
